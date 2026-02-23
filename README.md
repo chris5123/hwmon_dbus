@@ -47,6 +47,17 @@ sudo systemctl start hwmon
 Check that the service is running correctly:
 sudo systemctl status hwmon
 
+### 9. Execution / Testing
+
+## Run for Development or Debugging
+# Make sure the shared library is in LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=.
+./hwmon_dbus
+
+## Run for Development or Debugging
+# Run the daemon
+hwmon_dbus
+
 ## About
 - libhwmoncore.so contains the hardware monitoring core logic.
 - hwmon_dbus exposes sensor data through DBus interfaces.
