@@ -1,0 +1,12 @@
+[Unit]
+Description=HWMon DBus Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/hwmon_dbus 1000
+StandardOutput=append:/var/log/hwmon.log
+StandardError=append:/var/log/hwmon.log
+
+[Install]
+WantedBy=multi-user.target
