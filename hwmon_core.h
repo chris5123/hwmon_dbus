@@ -13,11 +13,11 @@ typedef struct {
 } sensor_value_t;
 
 /**
- * 讀取所有 hwmon sensor
+ * Read all hwmon sensors
  * @param out array of sensor_value_t
- * @param max 最大數量
- * @param count 回傳實際讀到的 sensor 數量
- * @return 0 成功, <0 失敗
+ * @param max maximum number of sensors
+ * @param count returns the actual number of sensors read
+ * @return 0 on success, <0 on failure
  */
 int hwmon_read_all(sensor_value_t *out, size_t max, size_t *count);
 

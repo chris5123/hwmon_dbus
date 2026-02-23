@@ -27,18 +27,18 @@ static void print_timestamp(FILE *out)
 int main(void)
 {
     while (1) {
-        // ===== 終端固定刷新區塊 =====
-        printf("\033[H");   // 游標回左上
-        printf("\033[J");   // 清掉螢幕內容
+        // ===== Terminal fixed refresh block =====
+        printf("\033[H");   // Move cursor to top-left
+        printf("\033[J");   // Clear screen content
 
-        // 打開 log 檔案 (追加模式)
+        // Open log file (append mode)
         FILE *logf = fopen(LOG_FILE, "a");
         if (!logf) {
             perror("fopen log");
             return 1;
         }
 
-        // timestamp 同時印螢幕 + log
+        // Timestamp printed to both screen and log
         print_timestamp(stdout);
         print_timestamp(logf);
 
