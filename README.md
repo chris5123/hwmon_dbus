@@ -64,5 +64,5 @@ Linux: supported
 ## Screenshots
 
 <p float="left">
-  <img src="hwmon_temp.png" width="300" />
+  <img src="hwmon_temp.png" width="800" />
 </p>
